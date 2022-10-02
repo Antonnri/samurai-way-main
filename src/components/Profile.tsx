@@ -2,8 +2,8 @@ import React from 'react';
 
 const Profile = () => {
     return <div className="content">
-        <div><img src="https://www.stockvault.net/data/2013/10/17/149353/thumb16.jpg" alt='logo'/></div>
-        <div><img src='https://www.stockvault.net/data/2020/02/24/273415/thumb16.jpg' alt='peoplePhoto'/></div>
+        <div><img src="https://interier-foto.ru/wp-content/uploads/dlinnye-foto-7.jpg" alt='Photo' id = 'Photo'/></div>
+        <div><img src='https://proprikol.ru/wp-content/uploads/2019/07/skachat-smeshnye-kartinki-zhivotnyh-1-1024x683.jpg' alt='peoplePhoto' id = 'peoplePhoto' /></div>
         <div>My posts
             <div>
                 <div>New post</div>
