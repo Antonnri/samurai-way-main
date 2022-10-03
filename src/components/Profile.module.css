@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    background-color: #ebe7d4;
+}
+
+.content1 img {
+    width: 100%;
+
+}
+.content2 img {
+    height: 200px;
+}

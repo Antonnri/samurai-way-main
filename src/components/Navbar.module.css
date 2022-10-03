@@ -1,0 +1,8 @@
+.nav {
+    grid-area: n;
+    background-color: #cdc8e0;
+}
+
+.item {
+    color: aliceblue;
+}
