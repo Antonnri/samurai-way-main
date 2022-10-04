@@ -4,8 +4,8 @@
 }
 
 .item {
-    color: darkblue;
+    color: white;
 }
 .item.active {
-    color: red;
+    color: white;
 }
