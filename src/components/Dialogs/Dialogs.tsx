@@ -2,32 +2,37 @@ import React from 'react';
 import dialogs from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 
+const DialogsItem = (props: any) => {
+    return (
+        <div className={dialogs.dialog + ' ' + dialogs.active}>
+            <NavLink to={'/dialogs/1' + props.id}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props: any) => {
+    return (
+        <div className={dialogs.message}>{props.messages}</div>
+    )
+}
+
 const Dialogs = (props: any) => {
     return (
         <div className={dialogs.dialogs}>
             <div>
                 <div className={dialogs.dialogItems}>
-                    <div className={dialogs.dialog + ' ' + dialogs.active}>
-                        <NavLink to='/dialogs/1'> Anton</NavLink>
-                    </div>
-                    <div className={dialogs.dialog}>
-                        <NavLink to='/dialogs/2'> Katya</NavLink>
-
-                    </div>
-                    <div className={dialogs.dialog}>
-                        <NavLink to='/dialogs/3'> Sergey</NavLink>
-
-                    </div>
-                    <div className={dialogs.dialog}>
-                        <NavLink to='/dialogs/4'> Winipooh</NavLink>
-                    </div>
+                    <DialogsItem name='Anton' id='1'/>
+                    <DialogsItem name='Katya' id='2'/>
+                    <DialogsItem name='Sergey' id='3'/>
+                    <DialogsItem name='Winipooh' id='4'/>
                 </div>
             </div>
-            <div className={dialogs.messages}>
-                <div className={dialogs.message}>Hi</div>
-                <div className={dialogs.message}>Hy</div>
-                <div className={dialogs.message}>Very well</div>
-
+            <div>
+                <div className={dialogs.messages}>
+                    <Message messages='Hi' id='1'/>
+                    <Message messages='Hy' id='2'/>
+                    <Message messages='Very well' id='3'/>
+                </div>
             </div>
         </div>
     )
