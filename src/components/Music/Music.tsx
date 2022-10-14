@@ -1,7 +1,9 @@
 import React from 'react';
-import Header from "../Header/Header";
+import {MusicType} from "../TypeProps";
 
-const Music = (props: any) => {
+
+
+const Music: React.FC<MusicType> = () => {
     return (
         <div>
             Music

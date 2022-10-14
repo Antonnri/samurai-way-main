@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from "../Header/Header";
 
-const News = (props: any) => {
+import {NewsType} from "../TypeProps";
+
+const News: React.FC<NewsType> = () => {
     return (
         <div>
             News
