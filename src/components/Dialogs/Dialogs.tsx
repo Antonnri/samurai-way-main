@@ -1,12 +1,13 @@
 import React from 'react';
-import dialogs from "./Dialogs.module.css"
+import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
 
 
+
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
     return (
-        <div className={dialogs.dialog + ' ' + dialogs.active}>
+        <div className={s.dialog + '' + s.active}>
             <NavLink to={'/dialogs/1' + props.id}>{props.name}</NavLink>
         </div>
     )
@@ -14,14 +15,14 @@ const DialogsItem: React.FC<DialogsItemType> = (props) => {
 
 const Message: React.FC<MessageType> = (props) => {
     return (
-        <div className={dialogs.message}>{props.messages}</div>
+        <div className={s.messages}>{props.messages}</div>
     )
 }
 
 
 const Dialogs: React.FC<DialogsType> = () => {
 
-    let dialogsData = [
+    let dialogs = [
         {id: 1, name: 'Anton'},
         {id: 2, name: 'Katya'},
         {id: 3, name: 'Sergey'},
@@ -32,21 +33,20 @@ const Dialogs: React.FC<DialogsType> = () => {
         {id: 1, massage: 'Hy'},
         {id: 1, massage: 'Very well'}
     ]
+
+    let dialogsElements = dialogs.map(d => <DialogsItem name={d.name} id={d.id}/>);
+    let messegesElements = messageData.map(m => <Message messages={m.massage} id={m.id}/>);
+
     return (
-        <div className={dialogs.dialogs}>
+        <div className={s.dialogs}>
             <div>
-                <div className={dialogs.dialogItems}>
-                    <DialogsItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                    <DialogsItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                    <DialogsItem name={dialogsData[2].name} id={dialogsData[2].id}/>
-                    <DialogsItem name={dialogsData[3].name} id={dialogsData[3].id}/>
+                <div className={s.dialogItems}>
+                    {dialogsElements}
                 </div>
             </div>
             <div>
-                <div className={dialogs.messages}>
-                    <Message messages={messageData[0].massage} id={messageData[0].id}/>
-                    <Message messages={messageData[1].massage} id={messageData[1].id}/>
-                    <Message messages={messageData[2].massage} id={messageData[2].id}/>
+                <div className={s.messages}>
+                    {messegesElements}
                 </div>
             </div>
         </div>

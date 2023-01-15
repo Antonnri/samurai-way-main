@@ -9,17 +9,16 @@
 }
 
 .dialog {
-
+    color: white;
 }
 
-.dialogItems .active {
+.dialogItems_active {
     color: red;
 }
 
 .messages {
     padding: 10px;
+    color: red;
 }
 
-.message {
 
-}
