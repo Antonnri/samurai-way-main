@@ -3,7 +3,7 @@ import header from "./Header.module.css"
 
 const Header = () => {
     return <header className={header.header}>
-        <img src="https://www.oasdom.com/wp-content/uploads/2018/01/oasdom.com-6-free-logo-design-online.jpg"/>
+        <img src="https://www.shutterstock.com/image-vector/url-letter-logo-creative-design-260nw-2247147225.jpg"/>
     </header>
 }
 export default Header

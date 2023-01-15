@@ -1,6 +1,6 @@
 import React from 'react';
 import profile from "./Profileinfo.module.css"
-import profileinfo from "./Profileinfo";
+
 
 
 const ProfileInfo = () => {

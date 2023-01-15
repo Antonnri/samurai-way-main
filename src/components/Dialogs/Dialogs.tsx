@@ -4,8 +4,6 @@ import {NavLink} from "react-router-dom";
 import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
 
 
-
-
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
     return (
         <div className={dialogs.dialog + ' ' + dialogs.active}>
@@ -27,8 +25,8 @@ const Dialogs: React.FC<DialogsType> = () => {
                 <div className={dialogs.dialogItems}>
                     <DialogsItem name='Anton' id={1}/>
                     <DialogsItem name='Katya' id={2}/>
-                        <DialogsItem name='Sergey' id={3}/>
-                        <DialogsItem name='Winipooh' id={4}/>
+                    <DialogsItem name='Sergey' id={3}/>
+                    <DialogsItem name='Winipooh' id={4}/>
                 </div>
             </div>
             <div>
@@ -39,7 +37,7 @@ const Dialogs: React.FC<DialogsType> = () => {
                 </div>
             </div>
         </div>
-)
+    )
 
 }
 export default Dialogs;

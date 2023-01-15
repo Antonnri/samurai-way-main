@@ -5,11 +5,13 @@ import Post from "./Posts/Post";
 
 const MyPosts = () => {
     return (
-        <div>
-            My posts
+        <div className={profile.item}>
+            <h3> My posts </h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <div><textarea>пишу в MyPosts</textarea></div>
+                <div>
+                    <button>Add post</button>
+                </div>
             </div>
             <div className={profile.item}>
                 <Post message='Hi'/>
