@@ -1,5 +1,3 @@
-
-
 export type DialogsType = {
     DialogsType: DialogsItemType;
     MessageType: MessageType;
@@ -24,5 +22,7 @@ export type NewsType = {
 }
 
 export type PostType = {
+    id: number;
     message: string;
+    likesCount: number;
 }

@@ -6,9 +6,10 @@ import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
 
 
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
+    let path = '/dialogs/' + props.id;
     return (
         <div className={s.dialog + '' + s.active}>
-            <NavLink to={'/dialogs/1' + props.id}>{props.name}</NavLink>
+            <NavLink to={path}>{props.name}</NavLink>
         </div>
     )
 }
