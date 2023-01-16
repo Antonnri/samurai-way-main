@@ -2,7 +2,7 @@ import React from 'react';
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
-
+import {dialogs, messageData} from "../Dialogs/DialogsData"
 
 
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
@@ -23,17 +23,7 @@ const Message: React.FC<MessageType> = (props) => {
 
 const Dialogs: React.FC<DialogsType> = () => {
 
-    let dialogs = [
-        {id: 1, name: 'Anton'},
-        {id: 2, name: 'Katya'},
-        {id: 3, name: 'Sergey'},
-        {id: 4, name: 'Winipooh'},
-    ]
-    let messageData = [
-        {id: 1, massage: 'Hi'},
-        {id: 1, massage: 'Hy'},
-        {id: 1, massage: 'Very well'}
-    ]
+
 
     let dialogsElements = dialogs.map(d => <DialogsItem name={d.name} id={d.id}/>);
     let messegesElements = messageData.map(m => <Message messages={m.massage} id={m.id}/>);
