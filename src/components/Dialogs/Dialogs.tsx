@@ -2,7 +2,6 @@ import React from 'react';
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
 import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
-import {dialogs, messageData} from "../Dialogs/DialogsData"
 
 
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
@@ -21,23 +20,21 @@ const Message: React.FC<MessageType> = (props) => {
 }
 
 
-const Dialogs: React.FC<DialogsType> = () => {
+const Dialogs: React.FC<DialogsType> = (props) => {
 
-
-
-    let dialogsElements = dialogs.map(d => <DialogsItem name={d.name} id={d.id}/>);
-    let messegesElements = messageData.map(m => <Message messages={m.massage} id={m.id}/>);
+/*    let dialogsElements = props.d.map(d => <DialogsItem name={Dialogs.name} id={Dialogs.id}/>);
+    let messegesElements = props.m.map(m => <Message messages={Message.massage} id={Message.id}/>);*/
 
     return (
         <div className={s.dialogs}>
             <div>
                 <div className={s.dialogItems}>
-                    {dialogsElements}
+                    {/*{dialogsElements}*/}
                 </div>
             </div>
             <div>
                 <div className={s.messages}>
-                    {messegesElements}
+{/*                    {messegesElements}*/}
                 </div>
             </div>
         </div>

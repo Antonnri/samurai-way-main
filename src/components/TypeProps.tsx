@@ -1,5 +1,5 @@
 export type DialogsType = {
-    DialogsType: DialogsItemType;
+    DialogsItemType: DialogsItemType;
     MessageType: MessageType;
 }
 
@@ -14,11 +14,24 @@ export type MessageType = {
 }
 
 export type MusicType = {
-    id: any;
+    id: number;
 }
 
 export type NewsType = {
-    id: any;
+    id: number;
+}
+
+
+export type AppType = {
+    DialogsType: DialogsType;
+
+}
+
+
+export type PostsType = {
+    id: number;
+    message: string;
+    likesCount: number;
 }
 
 export type PostType = {

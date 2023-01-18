@@ -8,28 +8,31 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
+import {AppType} from "./components/TypeProps";
 
 
+const App = () => {
 
 
-
-
-function App(props:any) {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
-                <div className='app-wrapper-content'>
-                    <Route path={'/Profile'} component={Profile}/>
-                    <Route path={'/Messages'} component={Dialogs}/>
-                    <Route path={'/News'} component={News}/>
-                    <Route path={'/Music'} component={Music}/>
-                    <Route path={'/Settings'} component={Settings}/>
+                <div className='app-wrapper-content' >
+{/*                    <Route path={'/Profile'} render={() => <Profile posts={props.posts}/>}/>,
+                    <Route path={'/Dialogs'} render={() => <Dialogs dialogs={props.dialogs} message={props.messages} />}/>,*/}
+{/*                    <Route path={'/News'} render={() => <News />}/>,
+                    <Route path={'/Music'} render={() => <Music />}/>
+                    <Route path={'/Settings'} render={() => <Settings/>}/>*/}
+
                 </div>
             </div>
         </BrowserRouter>
     );
 }
+
+
+
 
 export default App;
