@@ -1,15 +1,14 @@
 import React from 'react';
 import profile from "./MyPosts.module.css"
 import Post from "./Posts/Post";
-import {PostsType,} from "../../TypeProps";
-import {message} from "antd";
+import {PostType,} from "../../TypeProps";
+import {posts} from "../../../index";
 
 
 
+const MyPosts: React.FC<PostType> = () => {
 
-const Posts: React.FC<PostsType> = (props) => {
-
-/*    let postsElement = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>);*/
+let postsElement = posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     return (
         <div className={profile.item}>
@@ -20,10 +19,10 @@ const Posts: React.FC<PostsType> = (props) => {
                     <button>Add post</button>
                 </div>
             </div>
-            <div className={profile.item}>
- {/*               {postsElement}*/}
+            <div className={profile.item} >
+                {postsElement}
             </div>
         </div>
     )
 }
-export default Posts
+export default MyPosts

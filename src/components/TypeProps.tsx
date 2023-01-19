@@ -17,6 +17,7 @@ export type MusicType = {
     id: number;
 }
 
+
 export type NewsType = {
     id: number;
 }
@@ -28,12 +29,17 @@ export type AppType = {
 }
 
 
+export type MyPostsType = {
+    id: number;
+    message: string;
+    likesCount: number;
+    }
+
 export type PostsType = {
     id: number;
     message: string;
     likesCount: number;
 }
-
 export type PostType = {
     id: number;
     message: string;

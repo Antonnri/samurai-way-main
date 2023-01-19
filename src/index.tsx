@@ -5,7 +5,7 @@ import App from './App';
 
 
 
-/*let posts = [
+export let posts = [
     {id: 1, message: 'hi', likesCount: 11},
     {id: 2, message: 'Hello', likesCount: 12},
     {id: 3, message: 'Im happy!!!', likesCount: 23},
@@ -21,7 +21,7 @@ let message = [
     {id: 1, massage: 'Hi'},
     {id: 1, massage: 'Hy'},
     {id: 1, massage: 'Very well'}
-]*/
+]
 
 
 ReactDOM.render(<App /*posts={posts} dialogs={dialogs} message={message}*/ />,  document.getElementById('root'));
