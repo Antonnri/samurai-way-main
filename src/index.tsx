@@ -24,4 +24,5 @@ let message = [
 ]
 
 
-ReactDOM.render(<App /*posts={posts} dialogs={dialogs} message={message}*/ />,  document.getElementById('root'));
+// @ts-ignore
+ReactDOM.render(<App posts={posts} dialogs={dialogs} message={message} />,  document.getElementById('root'));

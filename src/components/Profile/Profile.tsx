@@ -5,11 +5,11 @@ import {PostType} from "../TypeProps";
 
 
 
-const Profile: React.FC<PostType> = (props) => {
+const Profile: React.FC<PostType> = (props)=> {
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts />
+            <MyPosts message={props.message} id={props.id} likesCount={props.likesCount}/>
         </div>
     )
 }

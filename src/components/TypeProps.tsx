@@ -27,13 +27,13 @@ export type AppType = {
     DialogsType: DialogsType;
 
 }
-
-
-export type MyPostsType = {
+export type ProfileType = {
     id: number;
     message: string;
     likesCount: number;
-    }
+
+}
+
 
 export type PostsType = {
     id: number;

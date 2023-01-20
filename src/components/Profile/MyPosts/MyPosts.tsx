@@ -7,8 +7,7 @@ import {posts} from "../../../index";
 
 
 const MyPosts: React.FC<PostType> = () => {
-
-let postsElement = posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
+    let postsElement = posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     return (
         <div className={profile.item}>
