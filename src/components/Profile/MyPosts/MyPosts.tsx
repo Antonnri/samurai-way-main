@@ -1,13 +1,14 @@
 import React from 'react';
 import profile from "./MyPosts.module.css"
 import Post from "./Posts/Post";
-import {PostType,} from "../../TypeProps";
-import {posts} from "../../../index";
+import {PostType} from "../../TypeProps";
+import state from "../../../State"
 
 
-
-const MyPosts: React.FC<PostType> = () => {
-    let postsElement = posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
+const MyPosts: React.FC<PostType> = (props) => {
+    let postsElement =
+        state.profilePage.posts.map
+        (p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     return (
         <div className={profile.item}>
@@ -18,7 +19,7 @@ const MyPosts: React.FC<PostType> = () => {
                     <button>Add post</button>
                 </div>
             </div>
-            <div className={profile.item} >
+            <div className={profile.item}>
                 {postsElement}
             </div>
         </div>

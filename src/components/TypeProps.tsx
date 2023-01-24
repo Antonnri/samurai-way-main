@@ -1,6 +1,13 @@
+
+export type StateType = {
+    ProfilePage: Array<ProfilePageType>;
+    dialogsPage: Array<DialogsType>;
+}
+
+
 export type DialogsType = {
-    DialogsItemType: DialogsItemType;
-    MessageType: MessageType;
+    DialogsItemType: Array<DialogsItemType>;
+    MessageType: Array<MessageType>;
 }
 
 export type DialogsItemType = {
@@ -10,8 +17,20 @@ export type DialogsItemType = {
 
 export type MessageType = {
     id: number;
-    messages: string;
+    message: string;
 }
+
+export type ProfilePageType = {
+    posts: Array<PostType>;
+}
+
+
+export type PostType = {
+    id: number;
+    message: string;
+    likesCount: number;
+}
+
 
 export type MusicType = {
     id: number;
@@ -20,28 +39,4 @@ export type MusicType = {
 
 export type NewsType = {
     id: number;
-}
-
-
-export type AppType = {
-    DialogsType: DialogsType;
-
-}
-export type ProfileType = {
-    id: number;
-    message: string;
-    likesCount: number;
-
-}
-
-
-export type PostsType = {
-    id: number;
-    message: string;
-    likesCount: number;
-}
-export type PostType = {
-    id: number;
-    message: string;
-    likesCount: number;
 }

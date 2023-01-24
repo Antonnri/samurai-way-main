@@ -21,10 +21,10 @@ const App: React.FC<ProfileType> = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Route path={'/Profile'} render={() => <Profile message={props.message} id={props.id} likesCount={props.likesCount}/>}/>,
-                    {/*<Route path={'/Dialogs'} render={() => <Dialogs dialogs={props.dialogs} message={props.messages} />}/>,*/}
-                    {/*<Route path={'/News'} render={() => <News />}/>,*/}
-                    {/*<Route path={'/Music'} render={() => <Music />}/>*/}
-                    {/*<Route path={'/Settings'} render={() => <Settings/>}/>*/}
+                    <Route path={'/Dialogs'} render={() => <Dialogs dialogs={props.dialogs} message={props.messages} />}/>,
+                    <Route path={'/News'} render={() => <News />}/>,
+                    <Route path={'/Music'} render={() => <Music />}/>
+                    <Route path={'/Settings'} render={() => <Settings/>}/>
 
                 </div>
             </div>
