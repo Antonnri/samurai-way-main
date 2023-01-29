@@ -2,7 +2,7 @@ import React from 'react';
 import profile from "./MyPosts.module.css"
 import Post from "./Posts/Post";
 import {PostType} from "../../TypeProps";
-import state from "../../../State"
+import state from "../../redux/state"
 
 
 const MyPosts: React.FC<PostType> = (props) => {

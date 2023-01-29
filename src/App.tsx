@@ -8,11 +8,12 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
-import {ProfileType} from "./components/TypeProps";
+import {DialogsPageType, stateType} from "./components/TypeProps";
 
 
-const App: React.FC<ProfileType> = (props) => {
 
+
+const App: React.FC<stateType> = (props) => {
 
     return (
         <BrowserRouter>
@@ -20,11 +21,23 @@ const App: React.FC<ProfileType> = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path={'/Profile'} render={() => <Profile message={props.message} id={props.id} likesCount={props.likesCount}/>}/>,
-                    <Route path={'/Dialogs'} render={() => <Dialogs dialogs={props.dialogs} message={props.messages} />}/>,
-                    <Route path={'/News'} render={() => <News />}/>,
-                    <Route path={'/Music'} render={() => <Music />}/>
-                    <Route path={'/Settings'} render={() => <Settings/>}/>
+
+                    <Route path={'/dialogs'} render={ () => <Dialogs dialogsItem={props.dialogsPage.dialogsItem}
+                    message={props.dialogsPage.message}/> }/>,
+
+{/*
+                    <Route path={'/profile'} render={() =>
+                        <Profile message={props.profilePage.posts.message}
+                                 likesCount={props.profilePage.posts.likesCount}
+                                 id={props.profilePage.posts.id}
+                    /> }/>,
+*/}
+
+
+
+{/*                    <Route path={'/News'} render={() => <News/>}/>,
+                    <Route path={'/Music'} render={() => <Music/>}/>
+                    <Route path={'/Settings'} render={() => <Settings/>}/>*/}
 
                 </div>
             </div>

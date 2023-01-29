@@ -1,8 +1,8 @@
 import React from 'react';
 import s from "./Dialogs.module.css"
 import {NavLink} from "react-router-dom";
-import {DialogsType, DialogsItemType, MessageType} from "../TypeProps";
-import state from "../../State"
+import {DialogsPageType, DialogsItemType, MessageType} from "../TypeProps";
+import state from "../redux/state"
 
 
 const DialogsItem: React.FC<DialogsItemType> = (props) => {
@@ -20,11 +20,10 @@ const Message: React.FC<MessageType> = (props) => {
     )
 }
 
+const Dialogs: React.FC<DialogsPageType> = (props) => {
 
-const Dialogs: React.FC<DialogsType> = (props) => {
-
-    let dialogsElements = props.DialogsItem.map(d => <DialogsItem name={state.dialogsPage.dialogsItem.name}  id={state.dialogsPage.dialogsItem.id}/>);
-    let messegesElements = state.dialogsPage.message.map(m => <Message messages={state.dialogsPage.message.massage} id={state.dialogsPage.message.id}/>);
+    let dialogsElements = state.dialogsPage.dialogsItem.map( d => <DialogsItem name={d.name} id={d.id}/>);
+    let messegesElements = state.dialogsPage.message.map( m => <Message message={m.message} id={m.id}/>);
 
     return (
         <div className={s.dialogs}>
@@ -42,4 +41,6 @@ const Dialogs: React.FC<DialogsType> = (props) => {
     )
 
 }
+
+
 export default Dialogs;

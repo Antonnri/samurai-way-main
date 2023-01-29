@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {DialogsType, PostType} from "./components/TypeProps";
+import {stateType} from "./components/TypeProps";
+import state from "./components/redux/state";
 
 
 
 
-ReactDOM.render(<App posts={posts} dialogs={dialogs} message={message}/>, document.getElementById('root'));
+// @ts-ignore
+ReactDOM.render(<App state={state}/>, document.getElementById('root'));
