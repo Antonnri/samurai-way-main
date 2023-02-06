@@ -8,12 +8,11 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
-import {DialogsPageType, stateType} from "./components/TypeProps";
+import {AppPropsType} from "./components/TypeProps";
+import state from "./components/redux/state";
 
 
-
-
-const App: React.FC<stateType> = (props) => {
+const App: React.FC<AppPropsType> = (props) => {
 
     return (
         <BrowserRouter>
@@ -21,23 +20,16 @@ const App: React.FC<stateType> = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-
-                    <Route path={'/dialogs'} render={ () => <Dialogs dialogsItem={props.dialogsPage.dialogsItem}
-                    message={props.dialogsPage.message}/> }/>,
-
-{/*
-                    <Route path={'/profile'} render={() =>
-                        <Profile message={props.profilePage.posts.message}
-                                 likesCount={props.profilePage.posts.likesCount}
-                                 id={props.profilePage.posts.id}
-                    /> }/>,
-*/}
-
-
-
-{/*                    <Route path={'/News'} render={() => <News/>}/>,
-                    <Route path={'/Music'} render={() => <Music/>}/>
-                    <Route path={'/Settings'} render={() => <Settings/>}/>*/}
+ncvncvncvn
+                    <Route path={'/dialogs'} render={() =>
+                        <Dialogs dialogsItem={props.state.dialogsPage.dialogsItem}
+                                 messages={props.state.dialogsPage.messages}/>}/>
+                    <Route path={'/dialogs'} render={() =>
+                        <Dialogs messages={props.state.dialogsPage.messages}
+                                 dialogsItem={props.state.dialogsPage.dialogsItem}/>}/>
+                    <Route path={'/profile'}
+                           render={() =>
+                        <Profile posts={props.state.profilePage.posts}/>}/>
 
                 </div>
             </div>
@@ -45,5 +37,5 @@ const App: React.FC<stateType> = (props) => {
     );
 }
 
-// posts={props.posts}
+
 export default App;

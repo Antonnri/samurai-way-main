@@ -1,12 +1,18 @@
-export type stateType = {
+export type AppPropsType = {
+    state: RootStatePropsType
+}
+
+
+export type RootStatePropsType = {
     profilePage: ProfilePageType
     dialogsPage: DialogsPageType
+    sidebar: sidebarType
 }
 
 
 export type DialogsPageType = {
     dialogsItem: Array<DialogsItemType>
-    message: Array<MessageType>
+    messages: Array<MessageType>
 }
 
 export type DialogsItemType = {
@@ -20,16 +26,16 @@ export type MessageType = {
 }
 
 export type ProfilePageType = {
-    posts: Array<PostType>
+    posts: Array<PostsType>
 }
-
-
-export type PostType = {
+export type PostsType = {
     id: number
     message: string
     likesCount: number
 }
 
+
+export type sidebarType = {}
 
 export type MusicType = {
     id: number
