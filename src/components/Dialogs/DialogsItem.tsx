@@ -1,15 +1,17 @@
 import React from "react";
-import {DialogsItemType} from "../TypeProps";
+import {DialogsUserNameType} from "../TypeProps";
 import s from "./Dialogs.module.css";
 import {NavLink} from "react-router-dom";
-import state from "../redux/state";
 
-const DialogsItem: React.FC<DialogsItemType> = (props) => {
+
+debugger;
+
+const dialogsUserName: React.FC<DialogsUserNameType> = (props) => {
     let path = '/dialogs/' + props.id;
     return (
         <div className={s.dialog + '' + s.active}>
-            <NavLink to={path}>{state.dialogsPage.dialogsItem}</NavLink>
+            <NavLink to={path}>{props.name}</NavLink>
         </div>
     )
 }
-export default DialogsItem
+export default dialogsUserName

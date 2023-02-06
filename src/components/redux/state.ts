@@ -12,7 +12,7 @@ let state = {
             {id: 1, message: 'Hy'},
             {id: 1, message: 'Very well'},
         ],
-        dialogsItem: [
+        dialogsUserName: [
             {id: 1, name: 'Anton'},
             {id: 2, name: 'Katya'},
             {id: 3, name: 'Sergey'},

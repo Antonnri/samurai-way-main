@@ -11,11 +11,11 @@ export type RootStatePropsType = {
 
 
 export type DialogsPageType = {
-    dialogsItem: Array<DialogsItemType>
     messages: Array<MessageType>
+    dialogsUserName: Array<DialogsUserNameType>
 }
 
-export type DialogsItemType = {
+export type DialogsUserNameType = {
     id: number
     name: string
 }

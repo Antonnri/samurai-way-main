@@ -9,7 +9,7 @@ const MyPosts: React.FC<ProfilePageType> = (props) => {
 
     let postsElement =
         props.posts.map
-            /*props.state.profilePage.posts.map*/
+
         (p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>);
 
     return (
