@@ -11,6 +11,7 @@ let state = {
             {id: 1, message: 'Hi'},
             {id: 1, message: 'Hy'},
             {id: 1, message: 'Very well'},
+            {id: 12, message: 'sjkdvbjaskvbsd'}
         ],
         dialogsUserName: [
             {id: 1, name: 'Anton'},

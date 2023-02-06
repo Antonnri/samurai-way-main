@@ -4,9 +4,9 @@ import s from "./Dialogs.module.css";
 import {NavLink} from "react-router-dom";
 
 
-debugger;
 
-const dialogsUserName: React.FC<DialogsUserNameType> = (props) => {
+
+const DialogsUserName: React.FC<DialogsUserNameType> = (props) => {
     let path = '/dialogs/' + props.id;
     return (
         <div className={s.dialog + '' + s.active}>
@@ -14,4 +14,4 @@ const dialogsUserName: React.FC<DialogsUserNameType> = (props) => {
         </div>
     )
 }
-export default dialogsUserName
+export default DialogsUserName

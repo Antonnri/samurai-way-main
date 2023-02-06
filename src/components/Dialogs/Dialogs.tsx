@@ -2,14 +2,14 @@ import React from 'react';
 import s from "./Dialogs.module.css"
 import {DialogsPageType} from "../TypeProps";
 import Message from "./Message";
-import DialogsItem from "./DialogsItem";
+import DialogsUserName from "./DialogsUserName";
 
 
 debugger;
 
 const Dialogs: React.FC<DialogsPageType> = (props) => {
 
-    let dialogsElements = props.dialogsUserName.map(d => <DialogsItem name={d.name} id={d.id}/>);
+    let dialogsElements = props.dialogsUserName.map(d => <DialogsUserName name={d.name} id={d.id}/>);
     let messegesElements = props.messages.map(m => <Message message={m.message} id={m.id}/>);
 
     return (
@@ -28,6 +28,5 @@ const Dialogs: React.FC<DialogsPageType> = (props) => {
     )
 
 }
-
 
 export default Dialogs;

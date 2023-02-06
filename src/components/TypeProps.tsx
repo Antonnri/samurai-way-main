@@ -11,7 +11,7 @@ export type RootStatePropsType = {
 
 
 export type DialogsPageType = {
-    messages: Array<MessageType>
+    messages: Array<MessagesType>
     dialogsUserName: Array<DialogsUserNameType>
 }
 
@@ -20,7 +20,7 @@ export type DialogsUserNameType = {
     name: string
 }
 
-export type MessageType = {
+export type MessagesType = {
     id: number
     message: string
 }
