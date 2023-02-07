@@ -4,7 +4,7 @@ import ProfileInfo from "./ProfileInfo/Profileinfo";
 import {ProfilePageType} from "../TypeProps";
 
 
-
+debugger;
 const Profile: React.FC<ProfilePageType> = (props)=> {
 
     return (
@@ -14,4 +14,5 @@ const Profile: React.FC<ProfilePageType> = (props)=> {
         </div>
     )
 }
+
 export default Profile

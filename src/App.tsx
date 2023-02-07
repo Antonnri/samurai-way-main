@@ -8,6 +8,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import {AppPropsType} from "./components/TypeProps";
 
+debugger;
 
 const App: React.FC<AppPropsType> = (props) => {
 

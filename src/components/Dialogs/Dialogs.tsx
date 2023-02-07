@@ -5,8 +5,6 @@ import Message from "./Message";
 import DialogsUserName from "./DialogsUserName";
 
 
-debugger;
-
 const Dialogs: React.FC<DialogsPageType> = (props) => {
 
     let dialogsElements = props.dialogsUserName.map(d => <DialogsUserName name={d.name} id={d.id}/>);
@@ -26,7 +24,6 @@ const Dialogs: React.FC<DialogsPageType> = (props) => {
             </div>
         </div>
     )
-
 }
 
 export default Dialogs;
