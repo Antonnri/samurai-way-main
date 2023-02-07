@@ -19,8 +19,7 @@ const App: React.FC<AppPropsType> = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
 
-
-                    <Route path={'/dialogs'}
+                    <Route path={'/Messages'}
                            render={() =>
                                <Dialogs dialogsUserName={props.state.dialogsPage.dialogsUserName}
                                         messages={props.state.dialogsPage.messages}/>}/>

@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 
 const DialogsUserName: React.FC<DialogsUserNameType> = (props) => {
-    let path = '/dialogs/' + props.id;
+    let path = '/Messages/' + props.id;
     return (
         <div className={s.dialog + '' + s.active}>
             <NavLink to={path}>{props.name}</NavLink>

@@ -4,7 +4,6 @@ import Post from "./Posts/Post";
 import {ProfilePageType} from "../../TypeProps";
 
 
-
 const MyPosts: React.FC<ProfilePageType> = (props) => {
 
     let postsElement =
