@@ -27,6 +27,8 @@ export type MessagesType = {
 
 export type ProfilePageType = {
     posts: Array<PostsType>
+
+
 }
 export type PostsType = {
     id: number
@@ -44,4 +46,19 @@ export type MusicType = {
 
 export type NewsType = {
     id: number
+}
+
+export type NewPostElementType = never;
+
+
+export type NewMessageElementType = never;
+
+export type AddPostType = {
+    newPost: Array<PostMessageType>
+}
+
+export type PostMessageType = {
+    id: number
+    message: string
+    likesCount: number
 }

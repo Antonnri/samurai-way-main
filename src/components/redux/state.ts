@@ -1,3 +1,6 @@
+import React from "react";
+import {AddPostType, PostMessageType} from "../TypeProps";
+
 let state = {
     profilePage: {
         posts: [
@@ -22,6 +25,17 @@ let state = {
     },
     sidebar: {},
 }
+
+
+export let addPost: React.FC<AddPostType> = (props) => {
+    let  newPost = {
+        id: 1,
+        message: 'Hi',
+        likesCount: 11
+    };
+    state.profilePage.posts.push(newPost)
+}
+
 
 export default state;
 

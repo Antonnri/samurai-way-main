@@ -1,6 +1,6 @@
 import React from 'react';
 import s from "./Dialogs.module.css"
-import {DialogsPageType} from "../TypeProps";
+import {DialogsPageType, NewMessageElementType} from "../TypeProps";
 import Message from "./Message";
 import DialogsUserName from "./DialogsUserName";
 
@@ -13,6 +13,14 @@ const Dialogs: React.FC<DialogsPageType> = (props) => {
     let help = props.dialogsUserName
     console.log(help)
 
+    let textMessage = React.createRef<HTMLTextAreaElement>() ;
+    // @ts-ignore
+    let addMessage: React.FC<NewMessageElementType> = (props) => {
+        let text =  textMessage.current!.value;
+        alert(text)
+    };
+
+
     return (
         <div className={s.dialogs}>
             <div>
@@ -23,6 +31,11 @@ const Dialogs: React.FC<DialogsPageType> = (props) => {
             <div>
                 <div className={s.messages}>
                     {messegesElements}
+
+                </div>
+                <div><textarea ref={textMessage}></textarea></div>
+                <div>
+                    <button onClick={addMessage}>Add post</button>
                 </div>
             </div>
         </div>
